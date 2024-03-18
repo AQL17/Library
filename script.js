@@ -43,8 +43,8 @@ function getFormData(){
         
     }
     console.log(bookData);
-    const book3 = new book(bookData[0] , bookData[1] , bookData[2] ,bookData[3]);
-    addBookToLibrary(book3);
+    const book2 = new book(bookData[0] , bookData[1] , bookData[2] ,bookData[3]);
+    addBookToLibrary(book2);
 }
 function addBookToLibrary(book){
     mylibrary.push(book);
@@ -56,6 +56,7 @@ function display(){
     for(let i = 0; i < mylibrary.length; i++){
         const bookhtml = `
         <div class="card">
+        <h1>Book ${i+1}</h1>
         <h2>Title:  ${mylibrary[i].title}</h2>
         <h3>Author:  ${mylibrary[i].author}</h3>
         <h3>Pages:  ${mylibrary[i].pages}</h3>
@@ -78,7 +79,7 @@ function toggleRead(i){
     display();
 }
 
-const book1 = new book("Harry potter" , "JK", 45 , false );
+const book1 = new book("Harry potter" , "J.K Rowling", 450, false);
 addBookToLibrary(book1);
 display();
 
